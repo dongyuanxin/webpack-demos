@@ -1,5 +1,3 @@
-import base from "./css/base.css";
-
 import { a } from "./vendor/util";
 console.log(a());
 

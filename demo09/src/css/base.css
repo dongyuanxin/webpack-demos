@@ -1,0 +1,24 @@
+html {
+  background: red;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border-radius: 3px;
+  background: green;
+}
+
+.box--big {
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+  background: red;
+}
+
+.box-small {
+  height: 100px;
+  width: 100px;
+  border-radius: 2px;
+  background: yellow;
+}
