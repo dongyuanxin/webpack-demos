@@ -15,6 +15,7 @@
 5.  [demo05](./demo05): 处理`CSS`
 6.  [demo06](./demo06): 处理`Scss`
 7.  [demo07](./demo07): 提取`Scss` (`CSS`等等)
+8.  [demo08](./demo08): JS Tree Shaking
 
 ## 关于我
 
