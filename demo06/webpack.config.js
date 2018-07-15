@@ -1,9 +1,4 @@
-/**
- * 此处写法是单独抽离样式表，更多请查阅: https://www.webpackjs.com/plugins/extract-text-webpack-plugin/
- * webpack4下安装extract-text-webpack-plugin: npm install --save-dev extract-text-webpack-plugin@next
- */
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -18,26 +13,19 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: {
-            loader: "style-loader"
+        // 注意 loader 顺序
+        use: [
+          {
+            loader: "style-loader" // 将 JS 字符串生成为 style 节点
           },
-          use: [
-            {
-              loader: "css-loader"
-            },
-            {
-              loader: "sass-loader"
-            }
-          ]
-        })
+          {
+            loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+          },
+          {
+            loader: "sass-loader" // 将 Sass 编译成 CSS
+          }
+        ]
       }
     ]
-  },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: "[name].min.css",
-      allChunks: false
-    })
-  ]
+  }
 };
