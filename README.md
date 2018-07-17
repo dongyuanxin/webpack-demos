@@ -17,6 +17,7 @@
 7.  [demo07](./demo07): 提取`Scss` (`CSS`等等)
 8.  [demo08](./demo08): JS Tree Shaking
 9.  [demo09](./demo09): CSS Tree Shaking
+10. [demo10](./demo10): 图片处理--识别, 压缩, Base64 编码, 合成雪碧图
 
 ## 关于我
 
