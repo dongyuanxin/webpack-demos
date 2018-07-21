@@ -13,16 +13,8 @@ const generateConfig = env => {
     {
       loader: "babel-loader"
     }
-  ].concat(
-    env === "production"
-      ? []
-      : [
-          {
-            loader: "eslint-loader"
-          }
-        ]
-  );
-  let cssLoaders = [
+  ];
+  let scssLoader = [
     {
       loader: "css-loader",
       options: {
@@ -41,19 +33,20 @@ const generateConfig = env => {
           fallback: {
             loader: "style-loader"
           },
-          use: cssLoaders
+          use: scssLoader
         })
       : [
           {
             loader: "style-loader",
             options: { sourceMap: env === "development" ? true : false }
           }
-        ].concat(cssLoaders);
+        ].concat(scssLoader);
+
   return {
-    entry: { app: "./app.js" },
+    entry: { app: "./src/app.js" },
     output: {
-      publicPath: "/",
-      path: path.resolve(__dirname, "dist"),
+      publicPath: env === "development" ? "/" : __dirname + "/../dist/",
+      path: path.resolve(__dirname, "../dist"),
       filename: "[name]-[hash:5].bundle.js",
       chunkFilename: "[name]-[hash:5].chunk.js"
     },
@@ -64,10 +57,6 @@ const generateConfig = env => {
       ]
     },
     plugins: [
-      new ExtractTextPlugin({
-        filename: "[name].min.css",
-        allChunks: false
-      }),
       new HtmlWebpackPlugin({
         filename: "index.html",
         template: "./index.html",
@@ -75,7 +64,8 @@ const generateConfig = env => {
         minify: {
           collapseWhitespace: true
         }
-      })
+      }),
+      new webpack.ProvidePlugin({ $: "jquery" })
     ]
   };
 };
