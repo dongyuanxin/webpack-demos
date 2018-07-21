@@ -23,6 +23,7 @@
 13. [demo13](./demo13): 生成`Html`文件
 14. [demo14](./demo14): `Watch` Mode && Clean Plugin
 15. [demo15](./demo15): ~~Dev server~~(整理中)
+16. [demo16](./demo16): ⭐ 生产模式和开发模式分离 ⭐
 
 ## 关于我
 
