@@ -1,6 +1,12 @@
+/**
+ * 1. webpack-dev-server: 配置 devServer 选项
+ * 2. SourceMap: 配置 devtool 选项( 不同的loader也应该打开对应的sourcemap选项 )
+ * 3. 设置代理: devServer.proxy 进行跨域代理设置
+ * 4. 路由 rewrite: devServer.historyApiFallback
+ * 5. 模块热更新: HotModuleReplacementPlugin && NamedModulesPlugin, 更多请见 './app.js'
+ */
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const path = require("path");
 
@@ -9,22 +15,10 @@ module.exports = {
     app: "./app.js"
   },
   output: {
-    publicPath: "/", // js引用路径或者CDN地址
-    path: path.resolve(__dirname, "dist"), // 打包文件的输出目录
+    publicPath: "/",
+    path: path.resolve(__dirname, "dist"),
     filename: "[name]-[hash:5].bundle.js",
     chunkFilename: "[name]-[hash:5].chunk.js"
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader",
-        options: {
-          formatter: require("eslint-friendly-formatter")
-        }
-      }
-    ]
   },
   devtool: "source-map",
   devServer: {
@@ -58,7 +52,6 @@ module.exports = {
     // }
   },
   plugins: [
-    // new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./index.html",
