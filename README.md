@@ -27,5 +27,5 @@
 
 ## 关于我
 
-- 个人网站: [YuanXin.me](http://yuanxin.me/)
+- 个人网站: [godbmw.com](https://godbmw.com/)
 - Email：yuanxin.me@gmail.com
