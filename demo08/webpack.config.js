@@ -13,26 +13,5 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js"
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader",
-            options: {
-              singleton: true
-            }
-          },
-          {
-            loader: "css-loader",
-            options: {
-              minimize: true
-            }
-          }
-        ]
-      }
-    ]
-  },
   mode: "production"
 };
