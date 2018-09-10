@@ -32,15 +32,19 @@ module.exports = {
           use: [
             {
               loader: "css-loader"
-            }
+            },
             // 雪碧图
-            // {
-            //   loader: "postcss-loader",
-            //   options: {
-            //     ident: "postcss",
-            //     plugins: [require("postcss-sprites")()]
-            //   }
-            // }
+            {
+              loader: "postcss-loader",
+              options: {
+                ident: "postcss",
+                plugins: [
+                  require("postcss-sprites")({
+                    spritePath: "./dist/static"
+                  })
+                ]
+              }
+            }
           ]
         })
       },
