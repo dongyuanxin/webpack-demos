@@ -11,6 +11,10 @@ let extractTextPlugin = new ExtractTextPlugin({
   allChunks: false
 });
 
+let spritesConfig = {
+  spritePath: "./dist/static"
+};
+
 module.exports = {
   entry: {
     app: "./src/app.js"
@@ -38,11 +42,7 @@ module.exports = {
               loader: "postcss-loader",
               options: {
                 ident: "postcss",
-                plugins: [
-                  require("postcss-sprites")({
-                    spritePath: "./dist/static"
-                  })
-                ]
+                plugins: [require("postcss-sprites")(spritesConfig)]
               }
             }
           ]
