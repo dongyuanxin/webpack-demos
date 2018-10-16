@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "server": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
