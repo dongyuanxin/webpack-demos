@@ -5,10 +5,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const path = require("path");
 
-const productionConfig = require("./webpack.prod.conf");
-const developmentConfig = require("./webpack.dev.conf");
+const productionConfig = require("./webpack.prod.conf.js"); // 引入生产环境配置文件
+const developmentConfig = require("./webpack.dev.conf.js"); // 引入开发环境配置文件
 
+/**
+ * 根据不同的环境，生成不同的配置
+ * @param {String} env "development" or "production"
+ */
 const generateConfig = env => {
+  // 将需要的Loader和Plugin单独声明
+
   let scriptLoader = [
     {
       loader: "babel-loader"
@@ -20,7 +26,7 @@ const generateConfig = env => {
       loader: "css-loader",
       options: {
         minimize: true,
-        sourceMap: env === "development" ? true : false
+        sourceMap: env === "development" ? true : false // 开发环境：开启source-map
       }
     }
   ];
@@ -28,12 +34,14 @@ const generateConfig = env => {
   let styleLoader =
     env === "production"
       ? ExtractTextPlugin.extract({
+          // 生产环境：分离、提炼样式文件
           fallback: {
             loader: "style-loader"
           },
           use: cssLoader
         })
-      : cssLoader;
+      : // 开发环境：页内样式嵌入
+        cssLoader;
 
   return {
     entry: { app: "./src/app.js" },
@@ -50,6 +58,7 @@ const generateConfig = env => {
       ]
     },
     plugins: [
+      // 开发环境和生产环境二者均需要的插件
       new HtmlWebpackPlugin({
         filename: "index.html",
         template: path.resolve(__dirname, "..", "index.html"),
