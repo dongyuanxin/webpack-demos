@@ -3,6 +3,7 @@ const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
+  mode: "development",
   devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, "../dist/"),
@@ -18,7 +19,8 @@ module.exports = {
           Cookie: ""
         }
       }
-    }
+    },
+    historyApiFallback: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

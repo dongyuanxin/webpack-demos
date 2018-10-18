@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "server": "webpack-dev-server --env development --open --config build/webpack.common.conf.js",
+    "dev": "webpack-dev-server --env development --open --config build/webpack.common.conf.js",
     "build": "webpack --env production --config build/webpack.common.conf.js"
   },
   "devDependencies": {
@@ -13,8 +13,6 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "jquery": "^3.3.1",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
