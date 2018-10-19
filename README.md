@@ -1,4 +1,4 @@
-# webpack-demos：全网最贴心webpack系列教程和配套代码
+# [webpack-demos：全网最贴心 webpack 系列教程和配套代码](https://godbmw.com/passage/76)
 
 > Wow！全网最贴心的`webpack4`系列中文教程和配套代码 👇
 
