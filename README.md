@@ -21,27 +21,27 @@
 ## 项目地址
 
 - GitHub 地址(代码): [webpack-demos](https://github.com/dongyuanxin/webpack-demos)
-- 讲解地址(课程): [webpack4 系列教程](https://godbmw.com/categories/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/)
+- 讲解地址(课程): [webpack4 系列教程](./docs/)
 
-## [课程目录](https://godbmw.com/categories/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/)
+## 课程目录
 
-1. webpack4 系列教程: 前言: [https://godbmw.com/passages/2018-07-29-webpack-demos-introduction/](https://godbmw.com/passages/2018-07-29-webpack-demos-introduction/)
-2. webpack4 系列教程(一): 打包 JS : [https://godbmw.com/passages/2018-07-30-webpack-pack-js/](https://godbmw.com/passages/2018-07-30-webpack-pack-js/)
-3. webpack4 系列教程(二): 编译 ES6 : [https://godbmw.com/passages/2018-07-31-webpack-compile-es6/](https://godbmw.com/passages/2018-07-31-webpack-compile-es6/)
-4. webpack4 系列教程(三): 多页面解决方案--提取公共代码 : [https://godbmw.com/passages/2018-08-06-webpack-mutiple-pages/](https://godbmw.com/passages/2018-08-06-webpack-mutiple-pages/)
-5. webpack4 系列教程(四): 单页面解决方案--代码分割和懒加载 : [https://godbmw.com/passages/2018-08-08-webpack-spa-split-lazy/](https://godbmw.com/passages/2018-08-08-webpack-spa-split-lazy/)
-6. webpack4 系列教程(五): 处理 CSS : [https://godbmw.com/passages/2018-08-17-webpack-css/](https://godbmw.com/passages/2018-08-17-webpack-css/)
-7. webpack4 系列教程(六): 处理 SCSS : [https://godbmw.com/passages/2018-08-18-webpack-scss/](https://godbmw.com/passages/2018-08-18-webpack-scss/)
-8. webpack4 系列教程(七): SCSS 提取和懒加载 : [https://godbmw.com/passages/2018-08-28-webpack-scss-lazy/](https://godbmw.com/passages/2018-08-28-webpack-scss-lazy/)
-9. webpack4 系列教程(八): JS Tree Shaking : [https://godbmw.com/passages/2018-09-01-js-tree-shaking/](https://godbmw.com/passages/2018-09-01-js-tree-shaking/)
-10. webpack4 系列教程(九): CSS Tree Shaking : [https://godbmw.com/passages/2018-09-02-css-tree-shaking/](https://godbmw.com/passages/2018-09-02-css-tree-shaking/)
-11. webpack4 系列教程(十): 图片处理汇总 : [https://godbmw.com/passages/2018-09-11-webpack-image/](https://godbmw.com/passages/2018-09-11-webpack-image/)
-12. webpack4 系列教程(十一)：字体文件处理 : [https://godbmw.com/passages/2018-10-09-webpack-chracter-file/](https://godbmw.com/passages/2018-10-09-webpack-chracter-file/)
-13. webpack4 系列教程(十二)：处理第三方 JavaScript 库 : [https://godbmw.com/passages/2018-10-09-webpack-js-pacakge/](https://godbmw.com/passages/2018-10-09-webpack-js-pacakge/)
-14. webpack4 系列教程(十三)：自动生成 HTML 文件 : [https://godbmw.com/passages/2018-10-17-automatic-html/](https://godbmw.com/passages/2018-10-17-automatic-html/)
-15. webpack4 系列教程(十四)：Clean Plugin and Watch Mode : [https://godbmw.com/passages/2018-10-18-webpack-clean-and-watch-mode/](https://godbmw.com/passages/2018-10-18-webpack-clean-and-watch-mode/)
-16. webpack4 系列教程(十五)：开发模式与 webpack-dev-server :[https://godbmw.com/passages/2018-10-19-webpack-dev-server/](https://godbmw.com/passages/2018-10-19-webpack-dev-server/)
-17. webpack4 系列教程(十六)：开发模式和生产模式·实战 : [https://godbmw.com/passages/2018-10-19-webpack-dev-and-prod/](https://godbmw.com/passages/2018-10-19-webpack-dev-and-prod/)
+
+1.  [demo01](./docs/01.一：打包JS): 打包`JS`
+2.  [demo02](./docs/02.二：编译ES6): 编译`ES6`
+3.  [demo03](./docs/03.三：多页面解决方案--提取公共代码): 多页面解决方案--提取公共代码
+4.  [demo04](./docs/04.四：单页面解决方案--代码分割和懒加载): 单页面解决方案--代码分割和懒加载
+5.  [demo05](./docs/05.五：处理CSS): 处理`CSS`
+6.  [demo06](./docs/06.六：处理SCSS): 处理`Scss`
+7.  [demo07](./docs/07.七：SCSS提取和懒加载): 提取`Scss` (`CSS`等等)
+8.  [demo08](./docs/08.八：JS-Tree-Shaking): JS Tree Shaking
+9.  [demo09](./docs/09.九：CSS-Tree-Shaking): CSS Tree Shaking
+10. [demo10](./docs/10.十：图片处理汇总): 图片处理--识别, 压缩, `Base64`编码, 合成雪碧图
+11. [demo11](./docs/11.十一：字体文件处理): 字体文件处理
+12. [demo12](./docs/12.十二：处理第三方JavaScript库): 处理第三方`JS`库
+13. [demo13](./docs/13.十三：自动生成HTML文件): 生成`Html`文件
+14. [demo14](./docs/14.十四：Clean-Plugin-and-Watch-Mode): `Watch` Mode && Clean Plugin
+15. [demo15](./docs/15.十五：开发模式与webpack-dev-server): 开发模式--`webpack-dev-server`
+16. [demo16](./docs/16.十六：开发模式和生产模式·实战): 生产模式和开发模式分离
 
 ## [代码目录](https://github.com/dongyuanxin/webpack-demos)
 
